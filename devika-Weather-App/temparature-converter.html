@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8" />
+   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <link rel="icon" href="img/logo.png" />
+   <title>Temperature Converter</title>
+   <link rel="stylesheet" href="temparature-converter.css" />
+   <script src="temparature-converter.js" defer></script>
+   
+   <style>
+      header {
+        padding: 20px;
+      }
+      .logo {
+        max-width: 100px;
+		border-radius: 10px;
+		top:auto;
+      }
+	  
+	          .blink {
+            animation: blinker 1.5s linear infinite;
+            color: red;
+            font-family: sans-serif;
+        }
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+   <main><header><img src="img/logo.png" alt="Logo" class="logo"></header>    
+      <font color="#FFFFFF"><h1>Temperature Converter</h1></font>
+      <div class="container">
+         <input type="number" id="celsius" placeholder="0" />
+         <label for="celsius"><sup>°</sup>C</label>
+      </div>
+
+      <div class="container">
+         <input type="number" id="farenheit" placeholder="32.000" />
+         <label for="farenheit"><sup>°</sup>F</label>
+      </div>
+
+      <div class="container">
+         <input type="number" id="kelvin" placeholder="273.150" />
+         <label for="kelvin">K</label>
+      </div>
+
+      <div class="container">
+         <input type="number" id="rankine" placeholder="491.670" />
+         <label for="rankine"><sup>°</sup> Ra</label>
+      </div>
+
+      <div class="container">
+         <input type="number" id="reaumur" placeholder="0" />
+         <label for="reaumur"><sup>°</sup> Re</label>
+      </div>
+   </main>
+
+   <div>
+      <div id="common-points-container">
+         <font color="#FFFFFF"><h3>Common Temperature Reference Points</h3></font>
+        <button class="button" id="sun"><div class="zoom"> <font size="+1">Surface of the Sun</font></div></button>
+         <button class="button" id="bp"><div class="zoom"> <font size="+1">Boiling Point of Water</font></div></button>
+         <button class="button" id="fp"><div class="zoom"> <font size="+1">Freezing Point of Water</font></div></button>
+         <button class="button" id="body-temparature"><div class="zoom"> <font size="+1">Body Temperature</font></div></button>
+         <button class="button" id="room-temparature"><div class="zoom"> <font size="+1">Room Temperature</font></div></button>
+         <center><p class="blink"><a style="text-decoration:none" href="index.html"><img src="img/arrow.png" height="50" width="60"></div></a></p></center>
+      </div>   
+   </div>
+</body>
+</html>
